@@ -11,10 +11,10 @@
 set -eo pipefail
 
 app_name="space-vim"
-repo_uri="https://github.com/liuchengxu/space-vim.git"
+repo_uri="https://github.com/JohnBro/space-vim.git"
 repo_name="space-vim"
 repo_path="$HOME/.space-vim"
-repo_branch="master"
+repo_branch="johnbro"
 _all=
 _vim=
 _neovim=
@@ -100,7 +100,7 @@ install_plugins() {
 
 generate_dot_spacevim() {
   if [ ! -f "$HOME/.spacevim" ]; then
-    cp "$HOME/.space-vim/init.spacevim" "$HOME/.spacevim"
+    ln -s "$HOME/.space-vim/init.spacevim" "$HOME/.spacevim"
 
     ret="$?"
     success "Successfully generated .spacevim in your home directory"

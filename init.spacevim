@@ -3,16 +3,16 @@
 let g:spacevim_plug_home = '~/.vim/plugged'
 
 " Uncomment the following line to override the leader key. The default value is space key "<\Space>".
-" let g:spacevim_leader = "<\Space>"
+let g:spacevim_leader = ","
 
 " Uncomment the following line to override the local leader key. The default value is comma ','.
-" let g:spacevim_localleader = ','
+let g:spacevim_localleader = '\'
 
 " Enable the existing layers in space-vim.
 " Refer to https://github.com/liuchengxu/space-vim/blob/master/layers/LAYERS.md for all available layers.
 let g:spacevim_layers = [
-      \ 'fzf', 'better-defaults', 'which-key',
-      \ ]
+    \ 'which-key', 'fzf', 'editing', 'text-align'
+    \ ]
 
 " Uncomment the following line if your terminal(-emulator) supports true colors.
 " let g:spacevim_enable_true_color = 1
@@ -27,7 +27,7 @@ let g:spacevim_layers = [
 function! UserInit()
 
   " Add your own plugin via Plug command.
-  Plug 'junegunn/seoul256.vim'
+  " Plug 'junegunn/seoul256.vim'
 
 endfunction
 
@@ -42,5 +42,10 @@ function! UserConfig()
   " Uncomment the following line If you have installed the powerline fonts.
   " It is good for airline layer.
   " let g:airline_powerline_fonts = 1
+
+  nnoremap <Space> :
+  vnoremap <Space> :
+  inoremap jk      <Esc>
+  vnoremap hl      <Esc>
 
 endfunction

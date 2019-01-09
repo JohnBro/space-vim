@@ -7,23 +7,42 @@ for s:i in range(1, 9)
 endfor
 unlet s:i
 
-let g:spacevim#map#leader#desc['?'] = [ 'Maps', 'show-keybindings' ]
-let g:spacevim#map#leader#desc[';'] = [ '<Plug>NERDCommenterToggle','commenter' ]
+let g:spacevim#map#leader#desc['?'] = [ 'Maps'  ,  'show-keybindings' ]
+let g:spacevim#map#leader#desc[';'] = {
+      \ 'name' : '+commenter',
+      \ ',' : ['<Esc>', 'exit'],
+      \ ';' : ['<Plug>NERDCommenterToggle'   , 'comment toggle'  ],
+      \ 'c' : ['<Plug>NERDCommenterComment'  , 'comment lines'   ],
+      \ 'u' : ['<Plug>NERDCommenterUncomment', 'uncomment lines' ],
+      \ }
+
+let g:spacevim#map#leader#desc['='] = {
+      \ 'name': 'formater'       ,
+      \ ',' : ['<Esc>', 'exit' ]  ,
+      \ '=' : ['spacevim#lang#util#Format()'  ,  'formatting']
+      \ }
+
 let g:spacevim#map#leader#desc[' '] = {
       \ 'name': '+tab' ,
-      \ '1' : 'tab-1'  ,
-      \ '2' : 'tab-2'  ,
-      \ '3' : 'tab-3'  ,
-      \ '4' : 'tab-4'  ,
-      \ '5' : 'tab-5'  ,
-      \ '6' : 'tab-6'  ,
-      \ '7' : 'tab-7'  ,
-      \ '8' : 'tab-8'  ,
-      \ '9' : 'tab-9'  ,
+      \ '1' : ['tab-1'  ,  'tab-1'],
+      \ '2' : ['tab-2'  ,  'tab-2'],
+      \ '3' : ['tab-3'  ,  'tab-3'],
+      \ '4' : ['tab-4'  ,  'tab-4'],
+      \ '5' : ['tab-5'  ,  'tab-5'],
+      \ '6' : ['tab-6'  ,  'tab-6'],
+      \ '7' : ['tab-7'  ,  'tab-7'],
+      \ '8' : ['tab-8'  ,  'tab-8'],
+      \ '9' : ['tab-9'  ,  'tab-9'],
       \ }
 
 let g:spacevim#map#leader#desc['a'] = {
       \ 'name' : '+align',
+      \ '&' : ['<Plug>AlignWith&'  ,  'align with &'],
+      \ '=' : ['<Plug>AlignWith='  ,  'align with ='],
+      \ ':' : ['<Plug>AlignWith:'  ,  'align with :'],
+      \ ',' : ['<Plug>AlignWith,'  ,  'align with ,'],
+      \ '|' : ['<Plug>AlignWith|'  ,  'align with |'],
+      \ 'w' : ['<Plug>AlignWith?'  ,  'align with what ?'],
       \ }
 
 let g:spacevim#map#leader#desc['b'] = {
@@ -123,7 +142,6 @@ let g:spacevim#map#leader#desc['l'] = {
       \ 'name' : '+lsp'                               ,
       \ 'a' : ['spacevim#lang#util#CodeAction()'      , 'code-action']      ,
       \ 'c' : ['LanguageClient_contextMenu()'         , 'context-menu']     ,
-      \ 'f' : ['spacevim#lang#util#Format()'          , 'formatting']       ,
       \ 'h' : ['LanguageClient#textDocument_hover()'  , 'hover']            ,
       \ 'r' : ['spacevim#lang#util#FindReferences()'  , 'references']       ,
       \ 'R' : ['spacevim#lang#util#Rename()'          , 'rename']           ,
