@@ -10,7 +10,6 @@ unlet s:i
 let g:spacevim#map#leader#desc['?'] = [ 'Maps'  ,  'show-keybindings' ]
 let g:spacevim#map#leader#desc[';'] = {
       \ 'name' : '+commenter',
-      \ ',' : ['<Esc>', 'exit'],
       \ ';' : ['<Plug>NERDCommenterToggle'   , 'comment toggle'  ],
       \ 'c' : ['<Plug>NERDCommenterComment'  , 'comment lines'   ],
       \ 'u' : ['<Plug>NERDCommenterUncomment', 'uncomment lines' ],
@@ -18,7 +17,6 @@ let g:spacevim#map#leader#desc[';'] = {
 
 let g:spacevim#map#leader#desc['='] = {
       \ 'name': 'formater'       ,
-      \ ',' : ['<Esc>', 'exit' ]  ,
       \ '=' : ['spacevim#lang#util#Format()'  ,  'formatting']
       \ }
 
@@ -39,8 +37,11 @@ let g:spacevim#map#leader#desc['a'] = {
       \ 'name' : '+align',
       \ '&' : ['<Plug>AlignWith&'  ,  'align with &'],
       \ '=' : ['<Plug>AlignWith='  ,  'align with ='],
+      \ '=>': ['<Plug>AlignWith=>' ,  'align with =>'],
       \ ':' : ['<Plug>AlignWith:'  ,  'align with :'],
+      \ '::': ['<Plug>AlignWith::' ,  'align with ::'],
       \ ',' : ['<Plug>AlignWith,'  ,  'align with ,'],
+      \ ',,': ['<Plug>AlignWith,,' ,  'align with ,,'],
       \ '|' : ['<Plug>AlignWith|'  ,  'align with |'],
       \ 'w' : ['<Plug>AlignWith?'  ,  'align with what ?'],
       \ }
@@ -79,7 +80,9 @@ let g:spacevim#map#leader#desc['c'] = {
       \ 'd' : ['spacevim#vim#cscope#Find("called")'   , 'find-functions-called-by-this-function'] ,
       \ }
 
-let g:spacevim#map#leader#desc['d'] = 'scroll-down'
+let g:spacevim#map#leader#desc['d'] = {
+      \ 'name' : '+doxygen',
+      \ }
 
 let g:spacevim#map#leader#desc['e'] = {
       \ 'name' : '+errors'     ,
@@ -123,8 +126,12 @@ let g:spacevim#map#leader#desc['g'] = {
       \ 'y' : ['Goyo'                   , 'goyo-mode']                  ,
       \ }
 
+" FIXME: do not use command here
 let g:spacevim#map#leader#desc['h'] = {
-      \ 'name' : '+help',
+      \ 'name' : '+history/help',
+      \ 'c' : [ 'History:'  , 'command history' ],
+      \ 'f' : [ 'History'   , 'file history' ]    ,
+      \ 's' : [ 'History/'  , 'search history' ] ,
       \ }
 
 let g:spacevim#map#leader#desc['j'] = {
@@ -155,6 +162,18 @@ let g:spacevim#map#leader#desc['l'] = {
         \ }                                                     ,
       \ }
 
+let g:spacevim#map#leader#desc['m'] = {
+      \ 'name' : '+mark',
+      \ '*' : 'mark search'            ,
+      \ '#' : 'mark search-in-buffer'  ,
+      \ '/' : 'mark search()'          ,
+      \ '?' : 'mark search()-in-buffer',
+      \ 'c' : 'mark clear'             ,
+      \ 'f' : 'mark for()'             ,
+      \ 'r' : 'mark regex'             ,
+      \ 's' : 'mark set'               ,
+      \ }
+
 let g:spacevim#map#leader#desc['p'] = {
       \ 'name' : '+projects'                                ,
       \ 'f' : ['spacevim#plug#fzf#FindFileInProject()' , 'find-file-in-project']  ,
@@ -172,6 +191,8 @@ let g:spacevim#map#leader#desc['s'] = {
       \ 'h' : ['spacevim#util#SyntaxHiGroup()'    , 'show-highlight-group']   ,
       \ 'b' : ['BLines'                           , 'search-in-buffer']       ,
       \ 'B' : ['spacevim#plug#fzf#SearchBcword()' , 'search-cword-in-buffer'] ,
+      \ 's' : ['<Plug>SwoopSearch'                , 'search-in-swoop-buffer'] ,
+      \ 'm' : ['<Plug>SwoopMultiBuffers'          , 'search-in-multi-swoop']  ,
       \ }
 
 function! s:buftag() abort

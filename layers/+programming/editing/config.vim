@@ -36,15 +36,15 @@ scriptencoding utf-8
   " Do not let vim-swoop create keybindings
   let g:swoopUseDefaultKeyMap = 0
   " Visual selection mode mapping: swoop current selection.
-  vmap <Plug>Search_F :call SwoopMultiSelection()<CR>
-  nnoremap <Plug>Search_F :call Swoop()<CR>
-  nnoremap <Plug>Search_M :call SwoopMulti()<CR>
+  vmap <Plug>SwoopSearch            :call SwoopMultiSelection()<CR>
+  nnoremap <Plug>SwoopSearch        :call Swoop()<CR>
+  nnoremap <Plug>SwoopMultiBuffers  :call SwoopMulti()<CR>
   " Normal mode mapping:
   "   <Leader>ss to start swoop buffer.
   "   <Leader>sm to swoop in multiple buffers.
-  vmap <leader>sf <Plug>Search_F
-  nmap <leader>sf <Plug>Search_F
-  nmap <leader>sm <Plug>Search_M
+  vmap <leader>ss <Plug>SwoopSearch
+  nmap <leader>ss <Plug>SwoopSearch
+  nmap <leader>sm <Plug>SwoopMultiBuffers
 " }
 
 " auto-pairs {
