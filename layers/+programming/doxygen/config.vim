@@ -26,8 +26,8 @@
       endfor
   endfunction
 
-  nnoremap <leader>da :call s:Doxygen('author')<cr>
-  nnoremap <leader>db :call s:Doxygen('block')<cr>
-  nnoremap <leader>df :call s:Doxygen('function')<cr>
-  nnoremap <leader>dl :call s:Doxygen('license')<cr>
+  nnoremap <leader>xda :call s:Doxygen('author')<cr>
+  nnoremap <leader>xdb :call s:Doxygen('block')<cr>
+  nnoremap <leader>xdf :call s:Doxygen('function')<cr>
+  nnoremap <leader>xdl :call s:Doxygen('license')<cr>
 " }

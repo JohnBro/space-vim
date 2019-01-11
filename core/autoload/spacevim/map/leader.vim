@@ -80,9 +80,7 @@ let g:spacevim#map#leader#desc['c'] = {
       \ 'd' : ['spacevim#vim#cscope#Find("called")'   , 'find-functions-called-by-this-function'] ,
       \ }
 
-let g:spacevim#map#leader#desc['d'] = {
-      \ 'name' : '+doxygen',
-      \ }
+let g:spacevim#map#leader#desc['d'] = 'scroll-down'
 
 let g:spacevim#map#leader#desc['e'] = {
       \ 'name' : '+errors'     ,
@@ -244,5 +242,8 @@ let g:spacevim#map#leader#desc['w'] = {
 let g:spacevim#map#leader#desc['x'] = {
       \ 'name' : '+text'           ,
       \ 'a' : ['<Plug>(EasyAlign)' , 'easy-align']                 ,
-      \ 'd' : ['StripWhitespace'   , 'delete-trailing-whitespace'] ,
+      \ 'd' : {
+        \ 'name' : '+doxygen',
+        \ }                                                        ,
+      \ 'w' : ['StripWhitespace'   , 'delete-trailing-whitespace'] ,
       \ }

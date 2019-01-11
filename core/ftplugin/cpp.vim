@@ -3,7 +3,9 @@ if exists('b:did_spacevim_cpp_ftplugin') || !spacevim#load('c-c++')
 endif
 let b:did_spacevim_cpp_ftplugin = 1
 
-setlocal cindent tabstop=2 shiftwidth=2 softtabstop=2
+setlocal cindent
+
+setlocal nowrap tabstop=4 shiftwidth=4 softtabstop=4 expandtab textwidth=150
 
 let b:ale_linters = ['clang']
 
