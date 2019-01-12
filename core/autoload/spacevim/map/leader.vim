@@ -85,11 +85,12 @@ let g:spacevim#map#leader#desc['f'] = {
       \ '7' : '7-fold-level'                    ,
       \ '8' : '8-fold-level'                    ,
       \ '9' : '9-fold-level'                    ,
-      \ 'd' : 'find-current-buffer-in-NERDTree' ,
-      \ 'f' : 'files-in-home-direcotry'         ,
-      \ 's' : 'save-file'                       ,
+      \ 'd' : 'find-current-buffer-in-NERDTree'  ,
+      \ 'f' : 'files-in-current-dir'             ,
+      \ 'h' : 'files-in-home-dir'                ,
+      \ 's' : 'save-file'                        ,
       \ 't' : 'toggle-NERDTree'                 ,
-      \ '?' : 'files-in-current-direcotry'      ,
+      \ '?' : 'files-in-current-dir'             ,
       \ 'R' : 'reload-vimrc'                    ,
       \ 'b' : ['BLines'                         , 'fzf-find-current-buffer'] ,
       \ }
@@ -152,23 +153,26 @@ let g:spacevim#map#leader#desc['l'] = {
       \ }
 
 let g:spacevim#map#leader#desc['m'] = {
-      \ 'name' : '+mark',
+      \ 'name' : '+marker',
       \ s:l : ['<Esc>'  ,  'exit'],
-      \ '*' : 'mark search'            ,
-      \ '#' : 'mark search-in-buffer'  ,
-      \ '/' : 'mark search()'          ,
-      \ '?' : 'mark search()-in-buffer',
+      \ '*' : 'mark search-before'     ,
+      \ '#' : 'mark search-next'       ,
       \ 'c' : 'mark clear'             ,
       \ 'f' : 'mark for()'             ,
       \ 'r' : 'mark regex'             ,
       \ 's' : 'mark set'               ,
       \ }
 
+let g:spacevim#map#leader#desc['M'] = {
+    \ 'name' : '+signature-Marker',
+    \ s:l : ['<Esc>'  ,  'exit'],
+    \ }
+
 let g:spacevim#map#leader#desc['p'] = {
       \ 'name' : '+projects'                                ,
       \ s:l : ['<Esc>'  ,  'exit'],
-      \ 'f' : ['spacevim#plug#fzf#FindFileInProject()' , 'find-file-in-project']  ,
-      \ 's' : ['Rag'                                        , 'search-in-project']     ,
+      \ 'f' : ['spacevim#plug#fzf#FindFileInProject()' , 'find-file-in-project']   ,
+      \ 's' : ['Rag'                                   , 'search-in-project']    ,
       \ 'w' : ['spacevim#plug#fzf#SearchCword()'       , 'find-cword-in-project'] ,
       \ }
 
@@ -179,12 +183,14 @@ let g:spacevim#map#leader#desc['Q'] = [ 'qa!', 'quit-without-saving' ]
 let g:spacevim#map#leader#desc['s'] = {
       \ 'name' : '+search/show'                   ,
       \ s:l : ['<Esc>'  ,  'exit'],
-      \ 'c' : 'search-clear-highlight'            ,
-      \ 'h' : ['spacevim#util#SyntaxHiGroup()'    , 'show-highlight-group']   ,
+      \ 'a' : 'search-in-ag'                      ,
       \ 'b' : ['BLines'                           , 'search-in-buffer']       ,
       \ 'B' : ['spacevim#plug#fzf#SearchBcword()' , 'search-cword-in-buffer'] ,
-      \ 's' : ['<Plug>SwoopSearch'                , 'search-in-swoop-buffer'] ,
+      \ 'c' : 'search-clear-highlight'            ,
+      \ 'h' : ['spacevim#util#SyntaxHiGroup()'    , 'show-highlight-group']   ,
       \ 'm' : ['<Plug>SwoopMultiBuffers'          , 'search-in-multi-swoop']  ,
+      \ 'r' : 'search-in-rg'                      ,
+      \ 's' : ['<Plug>SwoopSearch'                , 'search-in-swoop-buffer'] ,
       \ }
 
 function! s:buftag() abort

@@ -139,7 +139,7 @@ function! spacevim#end() abort
 
   call s:register_plugin()
   " Make vim-better-default settings can be overrided
-  " silent! runtime! plugin/default.vim
+  silent! runtime! plugin/default.vim
 
   call s:config()
   if exists('*UserConfig') | call UserConfig() | endif

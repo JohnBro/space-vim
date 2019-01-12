@@ -1,4 +1,5 @@
-nnoremap <Leader>ff :<c-u>call spacevim#wrap#fzf#Files()<CR>
+nnoremap <Leader>ff :<c-u>call spacevim#wrap#fzf#File()<CR>
+nnoremap <Leader>fh :<c-u>call spacevim#wrap#fzf#Files()<CR>
 nnoremap <Leader>bb :<c-u>call spacevim#wrap#fzf#Buffers()<CR>
 nnoremap <Leader>fl :<c-u>call spacevim#wrap#fzf#BLines()<CR>
 nnoremap <Leader>fL :<c-u>call spacevim#wrap#fzf#BLinesAll()<CR>
@@ -45,16 +46,27 @@ else
   xmap <Leader>? <plug>(fzf-maps-x)
   omap <Leader>? <plug>(fzf-maps-o)
 
-  nnoremap <Leader>ag :Ag!<CR>
-  vnoremap <Leader>ag :<c-u>call spacevim#plug#fzf#Vsearch()<CR>
+  nnoremap <Leader>sa :Ag!<CR>
+  vnoremap <Leader>sa :<c-u>call spacevim#plug#fzf#Vsearch()<CR>
 
   nnoremap <Leader>w? :Windows<CR>
   nnoremap <Leader>f? :Files<CR>
 
   nnoremap <silent> <Leader>sf :call spacevim#plug#fzf#Session()<CR>
 
-  nnoremap <leader>rg :Rg!<cr>
-  vnoremap <leader>rg :call spacevim#plug#fzf#RgVisual()<CR>
+  nnoremap <leader>sr :Rg!<cr>
+  vnoremap <leader>sr :call spacevim#plug#fzf#RgVisual()<CR>
+
+  nnoremap <leader>hc :History:<CR>
+  vnoremap <leader>hc :History:<CR>
+  nnoremap <leader>hf :History<CR>
+  vnoremap <leader>hf :History<CR>
+  nnoremap <leader>hs :History/<CR>
+  vnoremap <leader>hs :History/<CR>
+
+  nnoremap <F4> :History<CR>
+  vnoremap <F4> :History<CR>
+  inoremap <F4> <Esc>:History<CR>
 
   if !spacevim#load('unite')
     nnoremap <LocalLeader>v :call spacevim#plug#fzf#Open()<CR>

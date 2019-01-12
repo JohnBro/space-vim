@@ -41,4 +41,30 @@ endif
 let g:choosewin_overlay_enable = 1
 " }
 
+" vim-signature {
+let g:SignatureMap = {
+      \ 'Leader'             :  "<leader>Mm",
+      \ 'PlaceNextMark'      :  "<leader>M,",
+      \ 'ToggleMarkAtLine'   :  "<leader>Mt",
+      \ 'PurgeMarksAtLine'   :  "<leader>M-",
+      \ 'DeleteMark'         :  "<leader>Md",
+      \ 'PurgeMarks'         :  "<leader>Mp",
+      \ 'PurgeMarkers'       :  "<nop>",
+      \ 'GotoNextLineAlpha'  :  "<nop>",
+      \ 'GotoPrevLineAlpha'  :  "<nop>",
+      \ 'GotoNextSpotAlpha'  :  "<nop>",
+      \ 'GotoPrevSpotAlpha'  :  "<nop>",
+      \ 'GotoNextLineByPos'  :  "<nop>",
+      \ 'GotoPrevLineByPos'  :  "<nop>",
+      \ 'GotoNextSpotByPos'  :  "<nop>",
+      \ 'GotoPrevSpotByPos'  :  "<nop>",
+      \ 'GotoNextMarker'     :  "<nop>",
+      \ 'GotoPrevMarker'     :  "<nop>",
+      \ 'GotoNextMarkerAny'  :  "<nop>",
+      \ 'GotoPrevMarkerAny'  :  "<nop>",
+      \ 'ListBufferMarks'    :  "<leader>M/",
+      \ 'ListBufferMarkers'  :  "<leader>M?"
+      \ }
+" }
+
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/keybindings.vim'

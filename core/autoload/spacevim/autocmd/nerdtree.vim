@@ -15,6 +15,17 @@ let s:IndicatorMapCustom = {
             \ 'Clean'     : '✓',
             \ 'Unknown'   : '?'
             \ }
+let s:IndicatorMapNoUnicode = {
+            \ "Modified"   : "~",
+            \ "Staged"    : "+",
+            \ "Untracked" : "*",
+            \ "Renamed"   : "->",
+            \ "Unmerged"  : "=",
+            \ "Deleted"   : "X",
+            \ "Dirty"     : "x",
+            \ "Clean"     : "%",
+            \ "Unknown"   : "?"
+            \ }
 
 let s:colors = {}
 " you can add these colors to your .vimrc to help customizing
@@ -63,18 +74,27 @@ function! spacevim#autocmd#nerdtree#Init()
   let g:NERDTreeDirArrows = 1 " Disable that old “Press ? for help”
   let g:NERDTreeShowHidden = 1
   let g:NERDTreeAutoDeleteBuffer = 1
-  " ❯
-  let g:NERDTreeDirArrowExpandable = "\u276f"
-  let g:NERDTreeDirArrowCollapsible = "~"
-  " ○ ●
-  let g:NERDTreeDirArrowExpandable = "\u25cb"
-  let g:NERDTreeDirArrowCollapsible = "\u25cf"
+  if get(g:, 'spacevim_no_unicode', 0)
+    let g:NERDTreeDirArrowExpandable  = '+'
+    let g:NERDTreeDirArrowCollapsible = '-'
+  else
+    " ❯
+    let g:NERDTreeDirArrowExpandable = "\u276f"
+    let g:NERDTreeDirArrowCollapsible = "~"
+    " ○ ●
+    let g:NERDTreeDirArrowExpandable = "\u25cb"
+    let g:NERDTreeDirArrowCollapsible = "\u25cf"
+  endif
 
   let g:NERDTreeIgnore = s:ignore
 " }
 
 " nerdtree-git-plugin {
+if get(g:, 'spacevim_no_unicode', 0)
+  let g:NERDTreeIndicatorMapCustom = s:IndicatorMapNoUnicode
+else
   let g:NERDTreeIndicatorMapCustom = s:IndicatorMapCustom
+endif
 " }
 
 " vim-nerdtree-syntax-highlight {

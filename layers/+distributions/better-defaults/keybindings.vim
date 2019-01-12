@@ -30,7 +30,6 @@ nnoremap <silent><Leader>bh :Startify<CR>
 
 " vim-better-whitespace {
   nnoremap <Leader>xds :StripWhitespace<CR>
-" nnoremap <Leader>xdt
 " }
 
 " vim-choosewin

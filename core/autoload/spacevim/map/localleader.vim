@@ -8,4 +8,6 @@ let g:spacevim#map#localleader#desc['f'] = {
       \ 'f': ['spacevim#plug#fzf#Func()', 'fzf-related-function'],
       \ }
 
-
+let g:spacevim#map#localleader#desc['m'] = {
+      \ 'name': '+signature-marker',
+      \ }

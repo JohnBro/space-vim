@@ -59,11 +59,19 @@ augroup END
 " }
 
 " tagbar {
-  let g:tagbar_sort = 0
-  let g:tagbar_autofocus = 1
-  nnoremap <F6> :TagbarToggle<CR>
-  inoremap <F6> <ESC>:TagbarToggle<CR>
-  nnoremap <Leader>tt :TagbarToggle<CR>
+	let g:tagbar_left           = 1
+	let g:tagbar_width          = 35
+	let g:tagbar_autoclose      = 1
+	let g:tagbar_autofocus      = 1
+	let g:tagbar_sort           = 0
+	let g:tagbar_compact        = 0
+	let g:tagbar_indent         = 1
+	let g:tagbar_autopreview    = 0
+	let g:tagbar_foldlevel      = 2
+	let g:tagbar_previewwin_pos = "rightbelow"
+  nnoremap <F2>       : TagbarToggle<CR>
+  inoremap <F2> <ESC> : TagbarToggle<CR>
+  nnoremap <Leader>tt : TagbarToggle<CR>
 " }
 
 " asyncrun.vim {
