@@ -1,23 +1,17 @@
 scriptencoding utf-8
 
 " nerdcommenter {
+	let NERDCreateDefaultMappings    = 0
 	let g:NERDSpaceDelims            = 1
 	let g:NERDComaptSexyComs         = 1
 	let g:NERDAltDelims_java         = 1
 	let g:NERDCommentEmptyLines      = 1
 	let g:NERDDefaultAlign           = 'left'
 	let g:NERDTrimTrailingWhitespace = 1
-	let NERDCreateDefaultMappings    = 0
 
-	nmap <Leader>;; <Plug>NERDCommenterToggle
-	omap <Leader>;; <Plug>NERDCommenterToggle
-	vmap <Leader>;; <Plug>NERDCommenterToggle
-	nmap <Leader>;c <Plug>NERDCommenterComment
-	omap <Leader>;c <Plug>NERDCommenterComment
-	vmap <Leader>;c <Plug>NERDCommenterComment
-	nmap <Leader>;u <Plug>NERDCommenterUncomment
-	omap <Leader>;u <Plug>NERDCommenterUncomment
-	vmap <Leader>;u <Plug>NERDCommenterUncomment
+	nmap <Leader>; <Plug>NERDCommenterToggle
+	omap <Leader>; <Plug>NERDCommenterToggle
+	vmap <Leader>; <Plug>NERDCommenterToggle
 " }
 
 " vim-multiple-cursors {
@@ -48,8 +42,10 @@ scriptencoding utf-8
 " }
 
 " auto-pairs {
-	" let g:AutoPairsShortcutFastWrap   = ""
-	" let g:AutoPairsShortcutJump       = ""
-	" let g:AutoPairsShortcutBackInsert = ""
-	" let g:AutoPairsShortcutToggle     = ",t%"
+    " do not use <C-h> to delect
+    let g:AutoPairsMapCh = 0
+	let g:AutoPairsShortcutFastWrap   = ""
+	let g:AutoPairsShortcutJump       = ""
+	let g:AutoPairsShortcutBackInsert = ""
+	let g:AutoPairsShortcutToggle     = '<Space>t%'
 " }

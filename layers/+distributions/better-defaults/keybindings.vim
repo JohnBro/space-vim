@@ -1,9 +1,6 @@
 " Reload .vimrc
 nnoremap <Leader>fR :source $MYVIMRC<CR>
 
-" Use Tab to switch buffer
-" nnoremap <Tab> :bn<CR>
-nnoremap <S-Tab> :bp<CR>
 " if maparg('<C-I>', 'n') != ''
   " nunmap <C-I>
 " endif
@@ -13,16 +10,6 @@ map    <C-Tab>  :tabnext<CR>
 imap   <C-Tab>  <C-O>:tabnext<CR>
 map    <M-Tab>  :tabprev<CR>
 imap   <M-Tab>  <C-O>:tabprev<CR>
-
-for s:i in range(1, 9)
-  " <Leader>[1-9] move to window [1-9]
-  execute 'nnoremap <Leader>' . s:i . ' :' . s:i . 'wincmd w<CR>'
-  " <Leader><leader>[1-9] move to tab [1-9]
-  execute 'nnoremap <Leader><Leader>' . s:i . ' ' . s:i . 'gt'
-  " <Leader>b[1-9] move to buffer [1-9]
-  execute 'nnoremap <Leader>b' . s:i . ' :b' . s:i . '<CR>'
-endfor
-unlet s:i
 
 " Picked from https://github.com/tpope/vim-unimpaired
 " Move to core/ftplugin/qf.vim
@@ -41,8 +28,10 @@ nnoremap [t :tabp<cr>
 " Startify
 nnoremap <silent><Leader>bh :Startify<CR>
 
-" vim-better-whitespace
-nnoremap <Leader>xd :StripWhitespace<CR>
+" vim-better-whitespace {
+  nnoremap <Leader>xds :StripWhitespace<CR>
+" nnoremap <Leader>xdt
+" }
 
 " vim-choosewin
 nmap <Leader>ww <Plug>(choosewin)

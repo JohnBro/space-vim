@@ -7,5 +7,5 @@ setlocal cindent cinoptions=:0 cinoptions+=g0
 
 setlocal nowrap tabstop=4 shiftwidth=4 softtabstop=4 expandtab textwidth=150
 
-nnoremap <buffer> <LocalLeader>= :ClangFormat<CR>
-vnoremap <buffer> <LocalLeader>= :<C-U>ClangFormat<CR>
+nnoremap <buffer> <Leader>= :ClangFormat<CR>
+vnoremap <buffer> <Leader>= :<C-U>ClangFormat<CR>

@@ -2,6 +2,7 @@ scriptencoding utf-8
 " vim-better-default {
   let g:vim_better_default_key_mapping          = 1
   let g:vim_better_default_operator_key_mapping = 1
+  let g:vim_better_default_arrow_key_mapping    = 1
 " }
 
 " Put the :hi command after any :colorscheme command,
