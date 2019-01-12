@@ -12,18 +12,18 @@ else
 endif
 
 MP 'matze/vim-move', { 'on': [
-            \ '<Plug>MoveBlockDown',
-            \ '<Plug>MoveBlockUp',
-            \ '<Plug>MoveLineDown',
-            \ '<Plug>MoveLineUp',
-            \ ]}
+      \ '<Plug>MoveBlockDown',
+      \ '<Plug>MoveBlockUp',
+      \ '<Plug>MoveLineDown',
+      \ '<Plug>MoveLineUp',
+      \ ]}
 
 MP 'junegunn/rainbow_parentheses.vim', { 'for': ['lisp', 'clojure', 'scheme'] }
 
 " Need to disable airline extension for tagbar, see vim-airline issue 1313.
 MP 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
-MP 'Yggdroot/indentLine',             { 'on': 'IndentLinesToggle' }
+MP 'Yggdroot/indentLine',             { 'on': [], 'for': ['c', 'cpp', 'make', 'sh', 'vim'] }
 MP 'nathanaelkane/vim-indent-guides', { 'on': 'IndentGuidesToggle' }
 autocmd! User indentLine,vim-indent-guides call spacevim#autocmd#indent#Init()
 

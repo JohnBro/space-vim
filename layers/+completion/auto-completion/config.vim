@@ -18,3 +18,13 @@ set completeopt=noinsert,menuone,noselect
 inoremap <expr> <Tab> spacevim#vim#complete#Tab()
 inoremap <expr> <S-Tab> spacevim#vim#complete#STab()
 inoremap <expr> <CR> spacevim#vim#complete#CR()
+
+if exists('g:spacevim_use_ncm2') || has("nvim-0.2.2") && has('python3')
+
+elseif g:spacevim.vim8
+  " completor.vim {
+    let g:completor_clang_binary = '/usr/local/bin/clang'
+  " }
+else
+
+endif

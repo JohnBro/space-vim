@@ -16,7 +16,7 @@ let g:spacevim_layers = [
     \ 'fzf', 'better-defaults', 'which-key',
     \ 'editing', 'text-align', 'doxygen', 'marking',
     \ 'c-c++',
-    \ 'auto-completion', 'git', 'file-manager', 'programming'
+    \ 'auto-completion', 'git', 'diff', 'file-manager', 'programming'
     \ ]
 
 " Uncomment the following line if your terminal(-emulator) supports true colors.

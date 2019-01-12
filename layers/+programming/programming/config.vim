@@ -79,8 +79,16 @@ augroup END
   nnoremap <F5> :call spacevim#plug#asyncrun#CompileAndRun()<CR>
 " }
 
+" indentLine {
+  nnoremap <Leader>tii :IndentLinesToggle<CR>
+  vnoremap <Leader>tii :IndentLinesToggle<CR>
+  nnoremap <Leader>til :LeadingSpaceToggle<CR>
+  vnoremap <Leader>til :LeadingSpaceToggle<CR>
+" }
+
 " vim-indent-guides {
-  nnoremap <Leader>ti :IndentGuidesToggle<CR>
+  nnoremap <Leader>tig :IndentGuidesToggle<CR>
+  vnoremap <Leader>tig :IndentGuidesToggle<CR>
 " }
 
 " vim-polyglot {

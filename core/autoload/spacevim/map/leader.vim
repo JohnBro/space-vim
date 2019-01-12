@@ -204,15 +204,20 @@ function! s:buftag() abort
 endfunction
 
 let g:spacevim#map#leader#desc['t'] = {
-      \ 'name' : '+toggle/tag'                          ,
+      \ 'name' : '+toggle/tags'                     ,
       \ s:l : ['<Esc>'  ,  'exit'],
       \ '%' : 'auto-pairs',
       \ 'g' : ['spacevim#plug#toggle#Git()'         , 'git-status-indicator'] ,
-      \ 'i' : ['IndentGuidesToggle'                 , 'indent-guide']         ,
+      \ 'i' : {
+        \ 'name' : '+indent'    ,
+        \ 'i' : 'indent-lines'  ,
+        \ 'l' : 'leading-space' ,
+        \ 'g' : 'leading-guide' ,
+        \ },
       \ 'p' : ['setlocal paste!'                    , 'paste-mode']           ,
       \ 's' : ['SyntasticToggleMode'                , 'syntastic']            ,
-      \ 'b' : [function('s:buftag')                   , 'tags-in-current-buffer'],
-      \ 'T' : ['TagbarToggle'                       , 'tagbar']               ,
+      \ 'b' : [function('s:buftag')                 , 'tags-in-current-buffer'],
+      \ 't' : 'tagbar'                              ,
       \ 'c' : ['spacevim#vim#toggle#CursorColumn()' , 'cursor-column']        ,
       \ 'C' : ['spacevim#vim#toggle#ColorColumn()'  , 'color-column']         ,
       \ }

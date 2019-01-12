@@ -11,7 +11,7 @@ echo "                                                       "
 Push-Location ~
 
 $app_name    = "space-vim"
-$repo_url    = "https://github.com/liuchengxu/space-vim.git"
+$repo_url    = "https://github.com/JohnBro/space-vim.git"
 $repo_name   = "space-vim"
 $repo_path   = "$HOME\.space-vim"
 
