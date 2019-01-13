@@ -17,7 +17,7 @@ let g:spacevim_layers = [
     \ 'fzf', 'better-defaults', 'which-key',
     \ 'editing', 'text-align',
     \ 'c-c++',
-    \ 'git', 'file-manager', 'programming', 'doxygen',
+    \ 'git', 'file-manager', 'programming', 'doxygen', 
     \ 'airline'
     \ ]
 

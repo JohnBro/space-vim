@@ -17,8 +17,7 @@ if get(g:, 'spacevim_lsp_prefer_coc', 0)
   set signcolumn=yes
 
   " Use tab for trigger completion with characters ahead and navigate.
-  inoremap <expr> <TAB> spacevim#vim#complete#Tab()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+  call spacevim#vim#complete#Init()
 
   " Use <c-space> for trigger completion.
   inoremap <silent><expr> <c-space> coc#refresh()

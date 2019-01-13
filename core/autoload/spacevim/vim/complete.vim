@@ -4,6 +4,17 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+function! spacevim#vim#complete#Init()
+  inoremap <expr> <CR>       spacevim#vim#complete#CR()
+  inoremap <expr> <Down>     spacevim#vim#complete#Down()
+  inoremap <expr> <Up>       spacevim#vim#complete#Up()
+  inoremap <expr> <PageDown> spacevim#vim#complete#PageDown()
+  inoremap <expr> <PageUp>   spacevim#vim#complete#PageUp()
+  inoremap <expr> <Tab>      spacevim#vim#complete#Tab()
+  inoremap <expr> <S-Tab>    spacevim#vim#complete#STab()
+  inoremap <expr> <CR>       spacevim#vim#complete#CR()
+endfunction
+
 " tab, snippets
 function! spacevim#vim#complete#Tab() abort
   let tab_or_snippet = "\<tab>"
@@ -36,6 +47,30 @@ endfunction
 
 function! spacevim#vim#complete#CR() abort
   let key = pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
+  call feedkeys(key, 'n')
+  return ''
+endfunction
+
+function! spacevim#vim#complete#Up() abort
+  let key = pumvisible() ? "\<c-p>" : "\<Up>"
+  call feedkeys(key, 'n')
+  return ''
+endfunction
+
+function! spacevim#vim#complete#Down() abort
+  let key = pumvisible() ? "\<c-n>" : "\<Down>"
+  call feedkeys(key, 'n')
+  return ''
+endfunction
+
+function! spacevim#vim#complete#PageUp() abort
+  let key = pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+  call feedkeys(key, 'n')
+  return ''
+endfunction
+
+function! spacevim#vim#complete#PageDown() abort
+  let key = pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
   call feedkeys(key, 'n')
   return ''
 endfunction

@@ -15,9 +15,7 @@ endif
 " :h completeopt
 set completeopt=noinsert,menuone,noselect
 
-inoremap <expr> <Tab> spacevim#vim#complete#Tab()
-inoremap <expr> <S-Tab> spacevim#vim#complete#STab()
-inoremap <expr> <CR> spacevim#vim#complete#CR()
+call spacevim#vim#complete#Init()
 
 if exists('g:spacevim_use_ncm2') || has("nvim-0.2.2") && has('python3')
 

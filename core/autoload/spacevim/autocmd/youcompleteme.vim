@@ -43,14 +43,7 @@ function! spacevim#autocmd#youcompleteme#Init()
                 \ 'csv' : 1,
                 \}
 
-  inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-  inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-  inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-  inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-  inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
-  inoremap <expr> <Tab>      spacevim#vim#complete#Tab()
-  inoremap <expr> <S-Tab>    spacevim#vim#complete#STab()
-  inoremap <expr> <CR>       spacevim#vim#complete#CR()
+  call spacevim#vim#complete#Init()
 
   augroup spacevimYcm
     autocmd!

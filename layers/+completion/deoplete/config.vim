@@ -2,13 +2,15 @@ scriptencoding utf-8
 
 if g:spacevim.nvim || g:spacevim.vim8
 
-  inoremap <expr> <Tab> spacevim#vim#complete#Tab()
-  inoremap <expr> <S-Tab> spacevim#vim#complete#STab()
-  inoremap <expr> <CR> spacevim#vim#complete#CR()
+  call spacevim#vim#complete#Init()
 
-  set completeopt-=preview  "close show_docstring
+  " set completeopt-=preview  "close show_docstring
+
+  set pyxversion=3
+  let g:python3_host_prog = '/usr/local/bin/python3'
 
   let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_smart_case = 1
   " Set minimum syntax keyword length.
   let g:min_pattern_length = 2
 
@@ -16,7 +18,7 @@ if g:spacevim.nvim || g:spacevim.vim8
   let g:require_same_filetype = 'False'
 
   " delay
-  let g:deoplete#auto_complete_delay = 0
+  let g:deoplete#auto_complete_delay = 100
   " auto_refresh
   let g:auto_refresh_delay = 0
   let refresh_always = v:true
@@ -26,7 +28,7 @@ if g:spacevim.nvim || g:spacevim.vim8
   inoremap <expr><C-l> deoplete#refresh()
 
   " <C-h>, <BS>: close popup and delete backword char.
-  inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+  " inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 
   " register omni
   call deoplete#custom#source('omni', 'functions', {
@@ -46,6 +48,13 @@ if g:spacevim.nvim || g:spacevim.vim8
         \ 'xml'  : '<[^>]*',
         \ 'md'   : '<[^>]*',
         \ })
+
+	call deoplete#custom#option('sources', {
+				\ 'cpp': ['LanguageClient'],
+				\ 'c':   ['LanguageClient'],
+				\ 'vim': ['vim'],
+				\ 'zsh': ['zsh']
+				\})
 
   " fix conflict with multiple cursors
   function! Multiple_cursors_before()
