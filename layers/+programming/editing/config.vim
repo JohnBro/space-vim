@@ -42,10 +42,30 @@ scriptencoding utf-8
 " }
 
 " auto-pairs {
-    " do not use <C-h> to delect
-    let g:AutoPairsMapCh = 0
+  " do not use <C-h> to delect
+  let g:AutoPairsMapCh              = 0
 	let g:AutoPairsShortcutFastWrap   = ""
 	let g:AutoPairsShortcutJump       = ""
 	let g:AutoPairsShortcutBackInsert = ""
 	let g:AutoPairsShortcutToggle     = '<Space>t%'
+" }
+
+" vim-diff-enhanced {
+if has("patch-8.1.0360")
+  set diffopt+=internal,algorithm:patience
+else
+  " started In Diff-Mode set diffexpr (plugin not loaded yet)
+  if &diff
+    let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
+  endif
+endif
+" }
+
+" Mark, Using 'H' for 'Hightlight' to express {
+	nmap <leader>H* <Plug>MarkSearch
+	nmap <leader>H# <Plug>MarkSearchB
+	nmap <leader>Hc <Plug>MarkClear
+	nmap <leader>Hf <Plug>MarkFor
+	nmap <leader>Hr <Plug>MarkRegex
+	nmap <leader>Hs <Plug>MarkSet
 " }

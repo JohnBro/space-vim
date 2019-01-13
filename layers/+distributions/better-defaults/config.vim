@@ -43,12 +43,12 @@ let g:choosewin_overlay_enable = 1
 
 " vim-signature {
 let g:SignatureMap = {
-      \ 'Leader'             :  "<leader>Mm",
-      \ 'PlaceNextMark'      :  "<leader>M,",
-      \ 'ToggleMarkAtLine'   :  "<leader>Mt",
-      \ 'PurgeMarksAtLine'   :  "<leader>M-",
-      \ 'DeleteMark'         :  "<leader>Md",
-      \ 'PurgeMarks'         :  "<leader>Mp",
+      \ 'Leader'             :  "<leader>mm",
+      \ 'PlaceNextMark'      :  "<leader>m,",
+      \ 'ToggleMarkAtLine'   :  "<leader>mt",
+      \ 'PurgeMarksAtLine'   :  "<leader>m-",
+      \ 'DeleteMark'         :  "<leader>md",
+      \ 'PurgeMarks'         :  "<leader>mp",
       \ 'PurgeMarkers'       :  "<nop>",
       \ 'GotoNextLineAlpha'  :  "<nop>",
       \ 'GotoPrevLineAlpha'  :  "<nop>",
@@ -62,8 +62,8 @@ let g:SignatureMap = {
       \ 'GotoPrevMarker'     :  "<nop>",
       \ 'GotoNextMarkerAny'  :  "<nop>",
       \ 'GotoPrevMarkerAny'  :  "<nop>",
-      \ 'ListBufferMarks'    :  "<leader>M/",
-      \ 'ListBufferMarkers'  :  "<leader>M?"
+      \ 'ListBufferMarks'    :  "<leader>m/",
+      \ 'ListBufferMarkers'  :  "<leader>m?"
       \ }
 " }
 

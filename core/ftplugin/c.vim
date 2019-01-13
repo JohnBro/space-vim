@@ -3,7 +3,7 @@ if exists('b:did_spacevim_c_ftplugin') || !spacevim#load('c-c++')
 endif
 let b:did_spacevim_c_ftplugin = 1
 
-setlocal cindent cinoptions=:0 cinoptions+=g0
+setlocal cindent
 
 setlocal nowrap tabstop=4 shiftwidth=4 softtabstop=4 expandtab textwidth=150
 

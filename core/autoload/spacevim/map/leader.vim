@@ -14,7 +14,7 @@ let g:spacevim#map#leader#desc['='] = 'formater'
 let g:spacevim#map#leader#desc[s:l] = [ '<Esc>'  , 'exit' ]
 
 let g:spacevim#map#leader#desc['a'] = {
-      \ 'name' : '+align',
+      \ 'name' : '+aligner',
       \ s:l : ['<Esc>'  ,  'exit'],
       \ '&' : ['<Plug>AlignWith&'  ,  'align with &'],
       \ '=' : ['<Plug>AlignWith='  ,  'align with ='],
@@ -120,6 +120,17 @@ let g:spacevim#map#leader#desc['h'] = {
       \ 's' : [ 'History/'  , 'search history' ] ,
       \ }
 
+let g:spacevim#map#leader#desc['H'] = {
+      \ 'name' : '+Highlighter',
+      \ s:l : ['<Esc>'  ,  'exit'],
+      \ '*' : 'mark search-before'     ,
+      \ '#' : 'mark search-next'       ,
+      \ 'c' : 'mark clear'             ,
+      \ 'f' : 'mark for()'             ,
+      \ 'r' : 'mark regex'             ,
+      \ 's' : 'mark set'               ,
+      \ }
+
 let g:spacevim#map#leader#desc['j'] = {
       \ 'name' : '+jump/json'                   ,
       \ s:l : ['<Esc>'  ,  'exit'],
@@ -153,18 +164,7 @@ let g:spacevim#map#leader#desc['l'] = {
       \ }
 
 let g:spacevim#map#leader#desc['m'] = {
-      \ 'name' : '+marker',
-      \ s:l : ['<Esc>'  ,  'exit'],
-      \ '*' : 'mark search-before'     ,
-      \ '#' : 'mark search-next'       ,
-      \ 'c' : 'mark clear'             ,
-      \ 'f' : 'mark for()'             ,
-      \ 'r' : 'mark regex'             ,
-      \ 's' : 'mark set'               ,
-      \ }
-
-let g:spacevim#map#leader#desc['M'] = {
-    \ 'name' : '+signature-Marker',
+    \ 'name' : '+marker',
     \ s:l : ['<Esc>'  ,  'exit'],
     \ }
 
@@ -178,7 +178,7 @@ let g:spacevim#map#leader#desc['p'] = {
 
 let g:spacevim#map#leader#desc['q'] = 'quit'
 
-let g:spacevim#map#leader#desc['Q'] = [ 'qa!', 'quit-without-saving' ]
+let g:spacevim#map#leader#desc['Q'] = [ 'qa!', 'Quit!' ]
 
 let g:spacevim#map#leader#desc['s'] = {
       \ 'name' : '+search/show'                   ,
@@ -223,7 +223,7 @@ let g:spacevim#map#leader#desc['t'] = {
       \ }
 
 let g:spacevim#map#leader#desc['T'] = {
-      \ 'name': '+tab' ,
+      \ 'name': '+Tab' ,
       \ s:l : ['<Esc>'  ,  'exit'],
       \ '1' : 'tab-1'  ,
       \ '2' : 'tab-2'  ,

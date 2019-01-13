@@ -3,7 +3,10 @@ if exists('b:did_spacevim_vim_ftplugin')
 endif
 let b:did_spacevim_vim_ftplugin = 1
 
-setlocal tabstop=2 shiftwidth=2 softtabstop=2
+setlocal nowrap tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+
+nnoremap <Leader>= ggVG=
+vnoremap <leader>= =
 
 let b:ale_linters = ['vint']
 
