@@ -4,8 +4,6 @@ if g:spacevim.nvim || g:spacevim.vim8
 
   call spacevim#vim#complete#Init()
 
-  " set completeopt-=preview  "close show_docstring
-
   set pyxversion=3
   let g:python3_host_prog = '/usr/local/bin/python3'
 

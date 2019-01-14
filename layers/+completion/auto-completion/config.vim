@@ -12,10 +12,10 @@ if has_key(g:plugs, 'vim-mucomplete')
   iunmap <c-h>
 endif
 
+call spacevim#vim#complete#Init()
+
 " :h completeopt
 set completeopt=noinsert,menuone,noselect
-
-call spacevim#vim#complete#Init()
 
 if exists('g:spacevim_use_ncm2') || has("nvim-0.2.2") && has('python3')
 

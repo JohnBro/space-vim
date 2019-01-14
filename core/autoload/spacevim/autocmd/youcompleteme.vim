@@ -1,6 +1,4 @@
 function! spacevim#autocmd#youcompleteme#Init()
-  set completeopt=menu,menuone,longest,preview
-
   let g:ycm_global_ycm_extra_conf           = g:spacevim_plug_home . '/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
   let g:ycm_error_symbol                    = '✖'
   let g:ycm_warning_symbol                  = '⚠ '

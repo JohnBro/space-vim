@@ -5,6 +5,8 @@ function! s:check_back_space() abort
 endfunction
 
 function! spacevim#vim#complete#Init()
+  set completeopt=menuone,longest,preview
+
   inoremap <expr> <CR>       spacevim#vim#complete#CR()
   inoremap <expr> <Down>     spacevim#vim#complete#Down()
   inoremap <expr> <Up>       spacevim#vim#complete#Up()
