@@ -8,17 +8,11 @@ let g:spacevim_plug_home = '~/.vim/plugged'
 " Uncomment the following line to override the local leader key. The default value is comma ','.
 " let g:spacevim_localleader = '\'
 
-" If running on no unicode termainal, like putty
-" let g:spacevim_no_unicode = 1
-
 " Enable the existing layers in space-vim.
 " Refer to https://github.com/liuchengxu/space-vim/blob/master/layers/LAYERS.md for all available layers.
 let g:spacevim_layers = [
     \ 'fzf', 'better-defaults', 'which-key',
     \ 'editing', 'text-align',
-    \ 'c-c++',
-    \ 'git', 'file-manager', 'programming', 'doxygen', 
-    \ 'airline'
     \ ]
 
 " Uncomment the following line if your terminal(-emulator) supports true colors.
