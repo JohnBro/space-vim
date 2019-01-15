@@ -74,8 +74,7 @@ function! spacevim#autocmd#nerdtree#Init()
 " }
 
 " nerdtree-git-plugin {
-  let g:NERDTreeIndicatorMapCustom = s:IndicatorMapNoUnicode
-endif
+let g:NERDTreeIndicatorMapCustom = s:IndicatorMapCustom
 " }
 
 " vim-nerdtree-syntax-highlight {

@@ -101,7 +101,7 @@ let g:spacevim#map#leader#desc['g'] = {
       \ 'b' : ['Gblame'                 , 'fugitive-blame']             ,
       \ 'c' : ['BCommits'               , 'commits-for-current-buffer'] ,
       \ 'C' : ['Gcommit'                , 'fugitive-commit']            ,
-      \ 'd' : ['Gdiff'                  , 'fugitive-diff']              ,
+      \ 'd' : ['Gvdiff'                 , 'fugitive-diff']              ,
       \ 'e' : ['Gedit'                  , 'fugitive-edit']              ,
       \ 'l' : ['Glog'                   , 'fugitive-log']               ,
       \ 'r' : ['Gread'                  , 'fugitive-read']              ,
